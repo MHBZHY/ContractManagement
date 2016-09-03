@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: url("../../img/sora.png") fixed no-repeat;
+    background-size: cover;
+}
+h2 {
+    display: block;
+    text-align: center;
+}
+div.main {
+    margin: 0 auto 0 auto;
+    width: 30%;
+
+    opacity: 0.8;
+    background-color: white;
+    border-top: #1870c8 solid 3px;
+
+    box-shadow: 0 1px 8px gray;
+    /*rgba(0, 0, 0, 0.2)*/
+}
+p {
+    text-align: center;
+    display: block;
+}
+p.status {
+    font-size: 18px;
+    margin: 20px auto 20px auto;
+}
+input {
+    display: block;
+    height: 30px;
+    margin: 20px auto 20px auto;
+    width: 70%;
+
+    font-size: 14px;
+    outline: none;
+}
+input[type=text], input[type=password] {
+    padding: 0 10px 0 10px;
+}
+input[type=submit] {
+    width: 50%;
+    height: 30px;
+    margin-top: 30px;
+
+    background-color: #1870c8;
+    color: white;
+    border: 0;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #1870c8;
+}
+a#forget {
+    float: left;
+    margin-left: 20px;
+}
+a#register {
+    float: right;
+    margin-right: 20px;
+}

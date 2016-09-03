@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎登录,管理员</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/main/style.css">
+    <link rel="stylesheet" href="../css/main/admin.css">
+
+    <script src="../js/jQuery-2.2.4-min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/modules.js"></script>
+    <script src="../js/func.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+
+<style>
+    p#user_id {
+        display: none;
+    }
+    p.pages {
+        text-align: center;
+    }
+    .scroll {
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+</style>
+
+<p id="user_id"><%= user_id %></p>
+
+<div class="title container">
+    <div class="left col-xs-3">
+        <span>Contract Management</span>
+    </div>
+    <div class="right col-xs-9 nav navbar-static-top">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a id="dLabel" data-toggle="dropdown" data-target="#">欢迎您, <%= user_name %></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li>
+                        <div class="user-header">
+                            <p><%= is_admin %><%= user_name %></p>
+                            <p id="last">注册时间: <%= date %></p>
+                        </div>
+                        <button id="settings" onclick="location.href='change_password.html'">修改密码</button>
+                        <button id="logout" onclick="$.logout()">退出登录</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main container">
+    <h3>分配用户权限</h3>
+    <div class="scroll">
+        <table class="user"></table>
+    </div>
+    <div class="scroll">
+        <table class="contract"></table>
+    </div>
+    <div class="permission">
+        <input type="checkbox" name="select" value="">
+        <span>可读</span>
+        <input type="checkbox" name="update" value="">
+        <span>可修改</span>
+        <input type="checkbox" name="delete" value="">
+        <span>可删除</span>
+    </div>
+</div>
+
+<div class="tail">
+    <div class="passage container">
+        <p>此网站后端由node.js+ejs提供技术支持, 有意向者请移步官网了解</p>
+        <p>node.js: <a href="https://nodejs.org/">https://nodejs.org/</a></p>
+        <p>ejs: <a href="http://ejs.co">http://ejs.co</a></p>
+        <p>附上菜鸟教程: <a href="http://www.runoob.com/nodejs/nodejs-tutorial.html">http://www.runoob.com/nodejs/nodejs-tutorial.html</a></p>
+        <p>本网站设计创意借鉴了 <a href="https://portal.moemail.cn/">portal.moemail.cn</a> , 特此声明</p>
+        <p id="tail1" class="ptail">本网站仅供学习及实验用, 不从事任何商业盈利活动</p>
+        <p id="tail2" class="ptail">Copyright © 2016 zhy. 保留所有权利</p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        //获取所有用户
+        $.post("../../getAllUsers", null, function (data) {
+            var innerTable = "<tr>" +
+                    "<th>ID</th><th>名称</th><th>注册日期</th>";
+
+            $(data).each(function () {
+                innerTable += "<tr>" +
+                        "<td>" + this.id + "</td>" +
+                        "<td>" + this.name + "</td>" +
+                        "<td>" + this.date + "</td>" +
+                        "</tr>"
+            });
+
+            innerTable += "</tr>";
+
+            $("table.user").html(innerTable);
+        })
+    })
+</script>
+
+</body>
+</html>
+

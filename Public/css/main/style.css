@@ -1,0 +1,186 @@
+
+html, body {
+    padding: 0;
+    margin: 0;
+    min-width: 850px;
+}
+li {
+    list-style: none;
+}
+div.title {
+    height: 50px;
+    background-color: #3089ba;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+div.title div.left {
+    background-color: #2b6791;
+    cursor: default;
+}
+div.title div.left:hover {
+    background-color: #286390;
+}
+div.title div.left span {
+    display: block;
+    font-size: 20px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+div.title div.right ul {
+    float: right;
+    /*width: 100px;*/
+}
+a#dLabel {
+    color: white;
+    cursor: pointer;
+}
+.nav > li > a:hover {
+    background-color: #286390;
+}
+.nav .open > a:hover {
+    background-color: #286390;
+}
+.nav .open > a {
+    background-color: #286390;
+}
+ul.dropdown-menu {
+    right: 0;
+    left: auto;
+    padding: 0;
+}
+.dropdown-menu .user-header {
+    /*background: #3076a7;*/
+    background-color: #3089ba;
+    width: 200px;
+}
+.user-header p {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    margin: 0;
+    font-size: 17px;
+}
+p#last {
+    padding-bottom: 20px;
+}
+ul.dropdown-menu li button {
+    background-color: #ececec;
+    border: #a3a3a3 solid 1px;
+    margin: 10px 10px 10px 10px;
+}
+ul.dropdown-menu li button:hover {
+    background-color: #c4c4c4;
+}
+button#logout {
+    float: right;
+}
+div.main {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+div.main div.left {
+    background-color: #212a2d;
+    padding: 0;
+}
+ul.operation {
+    padding: 0;
+}
+ul.operation input {
+    cursor: default;
+}
+p.operation-header {
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    background-color: #24282b;
+    color: #43555c;
+    padding-left: 30px;
+    margin: 0;
+}
+input[type=file] {
+    display: none;
+}
+input[type=submit], input[type=button] {
+    border: 0;
+    padding: 0 0 0 40px;
+    margin: 0;
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #2d373a;
+
+    color: white;
+    text-align: left;
+}
+input[type=submit].activated:hover, input[type=button].activated:hover {
+    background-color: #282f32;
+    border-left: #3073a5 solid 4px;
+    padding-left: 36px;
+}
+input.activated.admin {
+    background-color: #282f32;
+    border-left: #3073a5 solid 4px;
+    padding-left: 36px;
+}
+div.main div.right table {
+    width: 100%;
+    margin: 20px 0 20px 0;
+    height: calc(100% - 40px - 50px);
+
+    /*border: lightgray solid 1px;*/
+    /*border-top: 0;*/
+}
+div.main div.right table th {
+    background-color: #26598b;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+}
+div.main div.right table th, td {
+    text-align: center;
+    padding: 0 10px 0 10px;
+}
+tr.active {
+    background-color: lightgray;
+}
+/* tail */
+div.tail {
+    /*height: 200px;*/
+    background-color: #f7f7f7;
+    margin: 4px 0 0 0;
+    width: 100%;
+}
+div.tail div.passage {
+    padding-top: 20px;
+    /*padding-bottom: 25px;*/
+    width: 90%;
+    color: #8b8b8b;
+    font-weight: 300;
+
+}
+p.ptail {
+    font-size: 10px;
+    font-weight: 200;
+    color: #8b8b8b;
+    padding: 0;
+}
+p#tail1 {
+    margin: 20px 0 0 0;
+    padding-bottom: 5px;
+    border-bottom: #c8c8c8 solid 1px;
+}
+p#tail2 {
+    margin-top: 5px;
+}
+
+
+input.inner {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px 0 10px;
+}

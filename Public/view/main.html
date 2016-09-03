@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>合同管理系统控制台</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/main/style.css">
+
+    <script src="../js/jQuery-2.2.4-min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/modules.js"></script>
+    <script src="../js/func.js"></script>
+    <script src="../js/main.js"></script>
+</head>
+<body>
+
+<style>
+    p#user_id, p#is_admin, p#table_mode {
+        display: none;
+    }
+    p.pages {
+        text-align: center;
+    }
+</style>
+
+<p id="user_id"><%= user_id %></p>
+<p id="is_admin"><%= is_admin %></p>
+<p id="table_mode"><%= table_mode %></p>
+
+<div class="title container">
+    <div class="left col-xs-3">
+        <span>Contract Management</span>
+    </div>
+    <div class="right col-xs-9 nav navbar-static-top">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a id="dLabel" data-toggle="dropdown" data-target="#">欢迎您, <%= user_name %></a>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li>
+                        <div class="user-header">
+                            <p><%= admin_flag %><%= user_name %></p>
+                            <p id="last">注册时间: <%= date %></p>
+                        </div>
+                        <button id="settings" onclick="location.href='change_password.html'">修改密码</button>
+                        <button id="logout" onclick="$.logout()">退出登录</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="main container">
+    <div class="left col-xs-3">
+        <ul class="operation">
+            <%- admin_module %>
+        </ul>
+    </div>
+    <div class="right col-xs-9">
+        <table></table>
+        <p class="pages">0/0, 共0</p>
+    </div>
+</div>
+
+<div class="tail">
+    <div class="passage container">
+        <p>此网站后端由node.js+ejs提供技术支持, 有意向者请移步官网了解</p>
+        <p>node.js: <a href="https://nodejs.org/">https://nodejs.org/</a></p>
+        <p>ejs: <a href="http://ejs.co">http://ejs.co</a></p>
+        <p>附上菜鸟教程: <a href="http://www.runoob.com/nodejs/nodejs-tutorial.html">http://www.runoob.com/nodejs/nodejs-tutorial.html</a></p>
+        <p>本网站设计创意借鉴了 <a href="https://portal.moemail.cn/">portal.moemail.cn</a> , 特此声明</p>
+        <p id="tail1" class="ptail">本网站仅供学习及实验用, 不从事任何商业盈利活动</p>
+        <p id="tail2" class="ptail">Copyright © 2016 zhy. 保留所有权利</p>
+    </div>
+</div>
+
+</body>
+</html>

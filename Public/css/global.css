@@ -1,0 +1,26 @@
+@font-face {
+    font-family: MyriadSetPro;
+    src: url(../font/MyriadSetPro-Thin.ttf) format('truetype'),
+    url(../font/MyriadSetPro-Thin.otf),
+    url(../font/MyriadSetPro-Thin.eot) format('embedded-opentype'),
+    /*url(../font/MyriadSetPro-Thin.eot),*/
+    url(../font/MyriadSetPro-Thin.woff) format('woff');
+}
+
+@font-face {
+    font-family: PingHeiLight;
+    src: url(../font/PingHei-Light.ttf) format('truetype'),
+    url(../font/PingHei-Light.otf),
+    url(../font/PingHei-Light.eot) format('embedded-opentype'),
+    /*url(../font/PingHei-Light.eot),*/
+    url(../font/PingHei-Light.otf),
+    url(../font/PingHei-Light.woff) format('woff');
+}
+
+body {
+    font-family: MyriadSetPro, PingHeiLight;
+}
+
+input[name=action] {
+    display: none;
+}
